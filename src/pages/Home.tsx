@@ -19,7 +19,7 @@ export const Home = () => {
       {/* Hero Section */}
       <Box
         sx={{
-          backgroundImage: 'url("https://raw.githubusercontent.com/ofer-shaham/hypnobirthing4/refs/heads/main/src/img/logo2.jpg")',
+          backgroundImage: 'url("https://github.com/ofer-shaham/hypnobirthing4/blob/main/src/img/logo2.jpg?raw=true")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           height: '80vh',
