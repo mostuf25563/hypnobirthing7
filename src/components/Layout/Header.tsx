@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { Sun, Moon, Menu as MenuIcon, Globe } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface HeaderProps {
   toggleTheme: () => void;
@@ -20,6 +20,7 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
   const { t, i18n } = useTranslation();
   const theme = useTheme();
+  const location = useLocation();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [langAnchorEl, setLangAnchorEl] = React.useState<null | HTMLElement>(null);
 
@@ -45,6 +46,19 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
     document.dir = lng === 'he' ? 'rtl' : 'ltr';
   };
 
+  const isActive = (path: string) => {
+    return location.pathname === path || (path === '/home' && location.pathname === '/');
+  };
+
+  const menuItems = [
+    { path: '/home', label: t('navigation.home') },
+    { path: '/about', label: t('navigation.about') },
+    { path: '/courses', label: t('navigation.courses') },
+    { path: '/pricing', label: t('navigation.pricing') },
+    { path: '/documents', label: t('navigation.documents') },
+    { path: '/contact', label: t('navigation.contact') }
+  ];
+
   return (
     <AppBar position="static" elevation={0}>
       <Toolbar>
@@ -58,20 +72,69 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
           <MenuIcon />
         </IconButton>
 
-        <Box sx={{ display: { xs: 'none', sm: 'flex' }, flexGrow: 1, gap: 2 }}>
-          <Button color="inherit" component={Link} to="/">{t('navigation.home')}</Button>
-          <Button color="inherit" component={Link} to="/about">{t('navigation.about')}</Button>
-          <Button color="inherit" component={Link} to="/courses">{t('navigation.courses')}</Button>
-          <Button color="inherit" component={Link} to="/pricing">{t('navigation.pricing')}</Button>
-          <Button color="inherit" component={Link} to="/documents">{t('navigation.documents')}</Button>
-          <Button color="inherit" component={Link} to="/contact">{t('navigation.contact')}</Button>
+        <Box sx={{ display: { xs: 'none', sm: 'flex' }, flexGrow: 1, gap: 1 }}>
+          {menuItems.map((item) => (
+            <Button
+              key={item.path}
+              color="inherit"
+              component={Link}
+              to={item.path}
+              sx={{
+                position: 'relative',
+                borderRadius: '20px',
+                px: 3,
+                py: 1,
+                transition: 'all 0.3s ease',
+                backgroundColor: isActive(item.path) ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
+                fontWeight: isActive(item.path) ? 'bold' : 'normal',
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  transform: 'translateY(-2px)',
+                  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'
+                },
+                '&::after': isActive(item.path) ? {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: 0,
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  width: '60%',
+                  height: '3px',
+                  backgroundColor: 'white',
+                  borderRadius: '2px'
+                } : {}
+              }}
+            >
+              {item.label}
+            </Button>
+          ))}
         </Box>
 
-        <IconButton color="inherit" onClick={handleLangMenu}>
+        <IconButton 
+          color="inherit" 
+          onClick={handleLangMenu}
+          sx={{
+            transition: 'all 0.3s ease',
+            '&:hover': {
+              transform: 'scale(1.1)',
+              backgroundColor: 'rgba(255, 255, 255, 0.1)'
+            }
+          }}
+        >
           <Globe />
         </IconButton>
 
-        <IconButton color="inherit" onClick={toggleTheme}>
+        <IconButton 
+          color="inherit" 
+          onClick={toggleTheme}
+          sx={{
+            transition: 'all 0.3s ease',
+            '&:hover': {
+              transform: 'scale(1.1)',
+              backgroundColor: 'rgba(255, 255, 255, 0.1)'
+            }
+          }}
+        >
           {theme.palette.mode === 'dark' ? <Sun /> : <Moon />}
         </IconButton>
 
@@ -80,12 +143,23 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          <MenuItem component={Link} to="/" onClick={handleClose}>{t('navigation.home')}</MenuItem>
-          <MenuItem component={Link} to="/about" onClick={handleClose}>{t('navigation.about')}</MenuItem>
-          <MenuItem component={Link} to="/courses" onClick={handleClose}>{t('navigation.courses')}</MenuItem>
-          <MenuItem component={Link} to="/pricing" onClick={handleClose}>{t('navigation.pricing')}</MenuItem>
-          <MenuItem component={Link} to="/documents" onClick={handleClose}>{t('navigation.documents')}</MenuItem>
-          <MenuItem component={Link} to="/contact" onClick={handleClose}>{t('navigation.contact')}</MenuItem>
+          {menuItems.map((item) => (
+            <MenuItem
+              key={item.path}
+              component={Link}
+              to={item.path}
+              onClick={handleClose}
+              sx={{
+                fontWeight: isActive(item.path) ? 'bold' : 'normal',
+                backgroundColor: isActive(item.path) ? 'rgba(76, 175, 80, 0.1)' : 'transparent',
+                '&:hover': {
+                  backgroundColor: 'rgba(76, 175, 80, 0.2)'
+                }
+              }}
+            >
+              {item.label}
+            </MenuItem>
+          ))}
         </Menu>
 
         <Menu

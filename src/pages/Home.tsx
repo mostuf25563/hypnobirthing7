@@ -19,7 +19,7 @@ export const Home = () => {
       {/* Hero Section */}
       <Box
         sx={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")',
+          backgroundImage: 'url("/src/img/logo1.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           height: '80vh',

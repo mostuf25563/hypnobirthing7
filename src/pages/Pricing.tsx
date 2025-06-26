@@ -1,12 +1,46 @@
 import React from 'react';
-import { Container, Typography, Box, Grid, Card, CardContent, CardMedia } from '@mui/material';
+import { Container, Typography, Box, Grid, Card, CardContent, Paper } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { Check } from 'lucide-react';
+import { Check, Clock, Users, MapPin, Video, Phone } from 'lucide-react';
 import { FadeInText } from '../components/Animations/FadeInText';
+import { ZoomableImage } from '../components/UI/ZoomableImage';
 
 export const Pricing = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'he';
+
+  const privateServices = [
+    {
+      title: 'ייעוץ אישי בהנקה',
+      description: 'ייעוץ פרטי ואישי בבית הלקוחה או במרפאה',
+      icon: <Users size={24} color="#4CAF50" />,
+      features: ['ביקור בית אישי', 'הערכה מקיפה', 'תוכנית טיפול מותאמת', 'מעקב טלפוני']
+    },
+    {
+      title: 'הכנה ללידה פרטית',
+      description: 'קורס פרטי מותאם אישית לזוג',
+      icon: <MapPin size={24} color="#4CAF50" />,
+      features: ['מפגשים בבית הלקוחה', 'תוכן מותאם אישית', 'גמישות בזמנים', 'תמיכה אישית']
+    },
+    {
+      title: 'ליווי וירטואלי',
+      description: 'ייעוץ והדרכה באמצעות וידאו קול',
+      icon: <Video size={24} color="#4CAF50" />,
+      features: ['פגישות זום', 'גמישות בזמנים', 'הקלטות למעקב', 'תמיכה בווטסאפ']
+    },
+    {
+      title: 'ייעוץ טלפוני חירום',
+      description: 'זמינות לייעוץ מיידי בשעות קריטיות',
+      icon: <Phone size={24} color="#4CAF50" />,
+      features: ['זמינות 24/7', 'מענה מיידי', 'ייעוץ מקצועי', 'הפניה לטיפול נוסף']
+    },
+    {
+      title: 'סדנאות קבוצתיות',
+      description: 'סדנאות מיוחדות לקבוצות קטנות',
+      icon: <Clock size={24} color="#4CAF50" />,
+      features: ['קבוצות של 4-6 זוגות', 'אווירה אינטימית', 'שיתוף חוויות', 'מחיר מוזל']
+    }
+  ];
 
   return (
     <Container maxWidth="lg" sx={{ py: 8 }} dir={isRTL ? 'rtl' : 'ltr'}>
@@ -26,31 +60,11 @@ export const Pricing = () => {
 
       {/* Pricing Image */}
       <Box sx={{ mb: 6, textAlign: 'center' }}>
-        <Card
-          elevation={5}
-          sx={{
-            maxWidth: 800,
-            mx: 'auto',
-            borderRadius: '20px',
-            overflow: 'hidden',
-            transition: 'all 0.3s ease',
-            '&:hover': {
-              transform: 'scale(1.02)',
-              boxShadow: '0 15px 40px rgba(0,0,0,0.2)'
-            }
-          }}
-        >
-          <CardMedia
-            component="img"
-            image="/src/img/prices.jpg"
-            alt="מחירון שירותים"
-            sx={{
-              height: 'auto',
-              maxHeight: 600,
-              objectFit: 'contain'
-            }}
-          />
-        </Card>
+        <ZoomableImage
+          src="/src/img/prices.jpg"
+          alt="מחירון שירותים"
+          sx={{ maxWidth: 800, mx: 'auto' }}
+        />
       </Box>
 
       <Grid container spacing={4}>
@@ -104,7 +118,7 @@ export const Pricing = () => {
           </Card>
         </Grid>
 
-        {/* In-Person Services */}
+        {/* Private Services */}
         <Grid item xs={12} md={6}>
           <Card
             elevation={3}
@@ -124,9 +138,53 @@ export const Pricing = () => {
               <Typography variant="h4" component="h2" gutterBottom textAlign="center" color="primary" sx={{ fontWeight: 'bold' }}>
                 {t('pricing.inPerson.title')}
               </Typography>
-              <Typography variant="body1" textAlign="center" sx={{ color: 'text.secondary' }}>
-                פרטים נוספים יתווספו בקרוב
-              </Typography>
+              
+              <Grid container spacing={2}>
+                {privateServices.map((service, index) => (
+                  <Grid item xs={12} key={index}>
+                    <Paper
+                      elevation={1}
+                      sx={{
+                        p: 2,
+                        borderRadius: '15px',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          transform: 'translateX(5px)',
+                          boxShadow: '0 5px 15px rgba(0,0,0,0.1)'
+                        }
+                      }}
+                    >
+                      <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                        {service.icon}
+                        <Typography variant="h6" sx={{ ml: 1, fontWeight: 'bold' }}>
+                          {service.title}
+                        </Typography>
+                      </Box>
+                      <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                        {service.description}
+                      </Typography>
+                      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                        {service.features.map((feature, idx) => (
+                          <Typography
+                            key={idx}
+                            variant="caption"
+                            sx={{
+                              backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                              color: 'primary.main',
+                              px: 1,
+                              py: 0.5,
+                              borderRadius: '10px',
+                              fontSize: '0.7rem'
+                            }}
+                          >
+                            {feature}
+                          </Typography>
+                        ))}
+                      </Box>
+                    </Paper>
+                  </Grid>
+                ))}
+              </Grid>
             </CardContent>
           </Card>
         </Grid>
@@ -135,6 +193,9 @@ export const Pricing = () => {
       <Box sx={{ mt: 6, textAlign: 'center' }}>
         <Typography variant="body1" color="text.secondary">
           {t('pricing.notes.vat')}
+        </Typography>
+        <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+          לפרטים נוספים על השירותים הפרטיים, אנא צרו קשר
         </Typography>
       </Box>
     </Container>
