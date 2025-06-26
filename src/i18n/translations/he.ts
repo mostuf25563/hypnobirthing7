@@ -74,22 +74,22 @@ export const heTranslations = {
   },
   pricing: {
     title: 'השקעה במסע שלכן',
-    subtitle: 'בחרו את התמיכה המתאימה ביותר לצרכים שלכן',
+    subtitle: 'בחרי את התמיכה המתאימה ביותר לצרכים שלך',
     online: {
       title: 'שירותים מקוונים',
       description: 'שירותי ייעוץ והדרכה מקוונים',
       services: {
         breastfeedingPrep: {
           title: 'הכנה להנקה',
-          price: '300'
+          price: '3000'
         },
         breastfeedingConsult: {
           title: 'ייעוץ הנקה',
-          price: '250'
+          price: '2500'
         },
         breastfeedingEnd: {
           title: 'גמילה מהנקה',
-          price: '200'
+          price: '2000'
         },
         gentleBirth: {
           title: 'לידה עדינה',
