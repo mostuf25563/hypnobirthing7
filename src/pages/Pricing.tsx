@@ -61,7 +61,7 @@ export const Pricing = () => {
       {/* Pricing Image */}
       <Box sx={{ mb: 6, textAlign: 'center' }}>
         <ZoomableImage
-          src="/src/img/prices.jpg"
+          src="https://raw.githubusercontent.com/ofer-shaham/hypnobirthing4/d5b272e4ad8c610dae7a9d05a06a8db6da17e75a/src/img/prices.jpg"
           alt="מחירון שירותים"
           sx={{ maxWidth: 800, mx: 'auto' }}
         />
