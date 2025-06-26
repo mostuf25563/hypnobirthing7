@@ -21,7 +21,7 @@ export const About = () => {
         <Grid item xs={12} md={6}>
           <Box sx={{ position: 'relative', textAlign: 'center' }}>
             <Avatar
-              src="https://raw.githubusercontent.com/ofer-shaham/hypnobirthing4/d5b272e4ad8c610dae7a9d05a06a8db6da17e75a/src/img/profile.jpg"
+              src="https://raw.githubusercontent.com/ofer-shaham/hypnobirthing4/refs/heads/main/src/img/profile.jpg"
               sx={{
                 width: { xs: 250, md: 350 },
                 height: { xs: 250, md: 350 },
