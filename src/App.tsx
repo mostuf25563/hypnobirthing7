@@ -12,6 +12,8 @@ import { Courses } from './pages/Courses';
 import { Pricing } from './pages/Pricing';
 import { Documents } from './pages/Documents';
 import { Contact } from './pages/Contact';
+import { Privacy } from './pages/Privacy';
+import { Terms } from './pages/Terms';
 import './i18n/i18n';
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/documents" element={<Documents />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
             </Routes>
           </main>
           <Footer />
