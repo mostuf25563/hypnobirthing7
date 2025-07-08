@@ -1,4 +1,2 @@
-https://app.netlify.com/projects/mariana-shaham
-
-https://mariana-shaham.netlify.app/
-https://bolt.new/~/github-y5k2frwh
+https://mariana-shaham-mostuf25563.netlify.app/
+https://bolt.new/~/github-qvdhtkje
