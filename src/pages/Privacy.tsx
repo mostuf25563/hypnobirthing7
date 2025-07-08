@@ -46,13 +46,27 @@ export const Privacy = () => {
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
         {sections.map((section, index) => (
           <Paper key={index} elevation={2} sx={{ p: 4, borderRadius: '16px' }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: isRTL ? 'row-reverse' : 'row', gap: 2, mb: 2 }}>
+            <Box sx={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              flexDirection: isRTL ? 'row-reverse' : 'row', 
+              gap: 2, 
+              mb: 2,
+              textAlign: isRTL ? 'right' : 'left'
+            }}>
               {section.icon}
-              <Typography variant="h5" color="primary" sx={{ fontWeight: 'bold' }}>
+              <Typography variant="h5" color="primary" sx={{ 
+                fontWeight: 'bold',
+                textAlign: isRTL ? 'right' : 'left'
+              }}>
                 {section.title}
               </Typography>
             </Box>
-            <Typography variant="body1" sx={{ textAlign: isRTL ? 'right' : 'left', lineHeight: 1.6 }}>
+            <Typography variant="body1" sx={{ 
+              textAlign: isRTL ? 'right' : 'left', 
+              lineHeight: 1.6,
+              direction: isRTL ? 'rtl' : 'ltr'
+            }}>
               {section.content}
             </Typography>
           </Paper>
