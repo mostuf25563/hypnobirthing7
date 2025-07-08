@@ -56,10 +56,7 @@ export const Footer: React.FC = () => {
             </Typography>
             <Box sx={{ mt: 1 }}>
               <Link href="/privacy" color="inherit" sx={{ mx: 1 }}>
-                {t('footer.privacy')}
-              </Link>
-              <Link href="/terms" color="inherit" sx={{ mx: 1 }}>
-                {t('footer.terms')}
+                מדיניות פרטיות ותנאי שירות
               </Link>
             </Box>
           </Box>
