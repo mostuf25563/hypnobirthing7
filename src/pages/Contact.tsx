@@ -22,7 +22,7 @@ export const Contact = () => {
       title: 'טלפון',
       value: '052-620-5052',
       link: 'tel:0526205052',
-      description: 'זמין לשיחות בין השעות 9:00-20:00',
+      description: 'זמינה לשיחות בין השעות 9:00-20:00',
       primary: false
     },
     {
