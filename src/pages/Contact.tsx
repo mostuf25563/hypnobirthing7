@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper, Link, Divider, IconButton, Chip } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { Mail, Phone, MessageCircle, MapPin, Instagram, Users, Clock, Calendar, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MessageCircle, MapPin, Instagram, Users, Clock, Calendar, ExternalLink, Quote } from 'lucide-react';
 import { DebugTooltip } from '../components/Debug/DebugTooltip';
 
 export const Contact = () => {
@@ -544,9 +544,7 @@ export const Contact = () => {
                     justifyContent: 'center'
                   }}
                 >
-                  <Typography variant="h2" color="primary" sx={{ opacity: 0.3, fontWeight: 300 }}>
-                    "
-                  </Typography>
+                  <Quote size={32} color="#D4A5A5" style={{ opacity: 0.4 }} />
                 </Box>
                 
                 <Typography 
