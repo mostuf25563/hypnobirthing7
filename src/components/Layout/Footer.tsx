@@ -35,6 +35,9 @@ export const Footer: React.FC = () => {
               <IconButton color="inherit" component={Link} href="https://www.instagram.com/mariana.shaham/">
                 <Instagram />
               </IconButton>
+              <IconButton color="inherit" component={Link} href="https://facebook.com/mary.shaham">
+                <Facebook />
+              </IconButton>
               <IconButton color="inherit" component={Link} href="mailto:maryza1982@gmail.com">
                 <Mail />
               </IconButton>

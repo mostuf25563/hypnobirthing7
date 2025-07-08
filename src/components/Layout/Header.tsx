@@ -112,31 +112,33 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
           ))}
         </Box>
 
-        <IconButton 
-          color="inherit" 
-          onClick={handleLangMenu}
-          sx={{
-            '&:hover': {
-              transform: 'scale(1.1)',
-              backgroundColor: 'rgba(255, 255, 255, 0.1)'
-            }
-          }}
-        >
-          <Globe />
-        </IconButton>
+        <Box sx={{ display: 'flex', gap: 1, ml: isRTL ? 0 : 'auto', mr: isRTL ? 'auto' : 0 }}>
+          <IconButton 
+            color="inherit" 
+            onClick={handleLangMenu}
+            sx={{
+              '&:hover': {
+                transform: 'scale(1.1)',
+                backgroundColor: 'rgba(255, 255, 255, 0.1)'
+              }
+            }}
+          >
+            <Globe />
+          </IconButton>
 
-        <IconButton 
-          color="inherit" 
-          onClick={toggleTheme}
-          sx={{
-            '&:hover': {
-              transform: 'scale(1.1)',
-              backgroundColor: 'rgba(255, 255, 255, 0.1)'
-            }
-          }}
-        >
-          {theme.palette.mode === 'dark' ? <Sun /> : <Moon />}
-        </IconButton>
+          <IconButton 
+            color="inherit" 
+            onClick={toggleTheme}
+            sx={{
+              '&:hover': {
+                transform: 'scale(1.1)',
+                backgroundColor: 'rgba(255, 255, 255, 0.1)'
+              }
+            }}
+          >
+            {theme.palette.mode === 'dark' ? <Sun /> : <Moon />}
+          </IconButton>
+        </Box>
 
         <Menu
           anchorEl={anchorEl}

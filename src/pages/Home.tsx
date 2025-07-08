@@ -1,12 +1,45 @@
 import React from 'react';
 import { Container, Typography, Box, Button, Grid, Paper } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
 import { Heart, Baby, Leaf } from 'lucide-react';
 import { DebugTooltip } from '../components/Debug/DebugTooltip';
 
 export const Home = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'he';
+  const { variant } = useParams();
+
+  const getHeroDesign = () => {
+    switch (variant) {
+      case '1':
+        return {
+          background: 'linear-gradient(135deg, rgba(212, 165, 165, 0.9) 0%, rgba(230, 184, 156, 0.9) 100%)',
+          textColor: 'white',
+          overlay: true
+        };
+      case '2':
+        return {
+          background: 'rgba(255, 255, 255, 0.95)',
+          textColor: '#4A4A4A',
+          overlay: false
+        };
+      case '3':
+        return {
+          background: 'linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(212, 165, 165, 0.8) 100%)',
+          textColor: 'white',
+          overlay: true
+        };
+      default:
+        return {
+          background: 'rgba(0, 0, 0, 0.5)',
+          textColor: '#4A4A4A',
+          overlay: false
+        };
+    }
+  };
+
+  const heroDesign = getHeroDesign();
 
   return (
     <Box dir={isRTL ? 'rtl' : 'ltr'}>
@@ -22,16 +55,27 @@ export const Home = () => {
           position: 'relative'
         }}
       >
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: heroDesign.background,
+            zIndex: 1
+          }}
+        />
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
           <Box sx={{ textAlign: isRTL ? 'right' : 'left' }}>
             <DebugTooltip jsonPath="animation_text.json > introduction.name">
               <Typography
                 variant="h1"
-                color="white"
+                sx={{ color: heroDesign.textColor }}
                 sx={{
                   fontSize: { xs: '2.5rem', md: '4rem' },
                   fontWeight: 'bold',
-                  textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
+                  textShadow: heroDesign.textColor === 'white' ? '2px 2px 4px rgba(0,0,0,0.8)' : 'none',
                   mb: 2
                 }}
               >
@@ -43,8 +87,8 @@ export const Home = () => {
               <Typography
                 variant="h4"
                 sx={{ 
-                  color: 'white',
-                  textShadow: '2px 2px 4px rgba(0,0,0,0.9)',
+                  color: heroDesign.textColor,
+                  textShadow: heroDesign.textColor === 'white' ? '2px 2px 4px rgba(0,0,0,0.9)' : 'none',
                   fontWeight: 'bold'
                 }}
                 mb={4}
