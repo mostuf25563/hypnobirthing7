@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Heart, Baby, Leaf } from 'lucide-react';
 import { DebugTooltip } from '../components/Debug/DebugTooltip';
+import { HomeDesignNavigation } from '../components/Debug/HomeDesignNavigation';
 
 export const Home = () => {
   const { t, i18n } = useTranslation();
@@ -30,10 +31,46 @@ export const Home = () => {
           textColor: 'white',
           overlay: true
         };
+      case '4':
+        return {
+          background: 'linear-gradient(135deg, rgba(255, 215, 0, 0.8) 0%, rgba(255, 165, 0, 0.8) 100%)',
+          textColor: 'white',
+          overlay: true
+        };
+      case '5':
+        return {
+          background: 'linear-gradient(135deg, rgba(65, 105, 225, 0.8) 0%, rgba(25, 25, 112, 0.8) 100%)',
+          textColor: 'white',
+          overlay: true
+        };
+      case '6':
+        return {
+          background: 'linear-gradient(135deg, rgba(255, 105, 180, 0.8) 0%, rgba(255, 20, 147, 0.8) 100%)',
+          textColor: 'white',
+          overlay: true
+        };
+      case '7':
+        return {
+          background: 'linear-gradient(135deg, rgba(147, 112, 219, 0.8) 0%, rgba(75, 0, 130, 0.8) 100%)',
+          textColor: 'white',
+          overlay: true
+        };
+      case '8':
+        return {
+          background: 'linear-gradient(135deg, rgba(50, 205, 50, 0.8) 0%, rgba(34, 139, 34, 0.8) 100%)',
+          textColor: 'white',
+          overlay: true
+        };
+      case '9':
+        return {
+          background: 'linear-gradient(135deg, rgba(255, 69, 0, 0.8) 0%, rgba(255, 140, 0, 0.8) 100%)',
+          textColor: 'white',
+          overlay: true
+        };
       default:
         return {
-          background: 'rgba(0, 0, 0, 0.5)',
-          textColor: '#4A4A4A',
+          background: 'rgba(0, 0, 0, 0.4)',
+          textColor: 'white',
           overlay: false
         };
     }
@@ -43,6 +80,7 @@ export const Home = () => {
 
   return (
     <Box dir={isRTL ? 'rtl' : 'ltr'}>
+      <HomeDesignNavigation />
       {/* Hero Section */}
       <Box
         sx={{
@@ -73,6 +111,7 @@ export const Home = () => {
                 variant="h1"
                 sx={{ color: heroDesign.textColor }}
                 sx={{
+                  color: heroDesign.textColor,
                   fontSize: { xs: '2.5rem', md: '4rem' },
                   fontWeight: 'bold',
                   textShadow: heroDesign.textColor === 'white' ? '2px 2px 4px rgba(0,0,0,0.8)' : 'none',

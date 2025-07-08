@@ -42,8 +42,11 @@ function App() {
               <Route path="/home/:variant" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/courses" element={<Courses />} />
+              <Route path="/courses/:variant" element={<Courses />} />
               <Route path="/pricing" element={<Pricing />} />
+              <Route path="/pricing/:variant" element={<Pricing />} />
               <Route path="/documents" element={<Documents />} />
+              <Route path="/documents/:variant" element={<Documents />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
