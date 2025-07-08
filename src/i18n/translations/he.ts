@@ -205,7 +205,7 @@ export const heTranslations = {
       email: 'maryza1982@gmail.com',
       whatsapp: 'ווטסאפ זמין',
       whatsappLink: 'https://chatwith.io/s/mariana-shaham',
-      location: 'קיבוץ נען, ישראל'
+      location: 'קיבוץ נען'
     }
   },
   footer: {
