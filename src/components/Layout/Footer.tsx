@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, Link, IconButton, useTheme } from '@mui/material';
-import { Instagram, Facebook, Mail, Phone } from 'lucide-react';
+import { Instagram, Mail, Phone, Facebook } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export const Footer: React.FC = () => {
