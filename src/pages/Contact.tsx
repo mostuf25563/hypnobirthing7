@@ -94,7 +94,7 @@ export const Contact = () => {
                 fontSize: { xs: '1.1rem', md: '1.25rem' }
               }}
             >
-              אני כאן בכדי לתמוך בך ובמסע שלך
+              בחרי את הדרך הנוחה לך ביותר ליצירת קשר
             </Typography>
           </DebugTooltip>
         </Box>
