@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
     <Box
       component="footer"
       sx={{
-        bgcolor: theme.palette.primary.main,
+        bgcolor: '#D4A5A5',
         color: 'white',
         py: 6,
         mt: 'auto'

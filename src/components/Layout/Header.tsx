@@ -84,6 +84,8 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
                 borderRadius: '20px',
                 px: 3,
                 py: 1,
+                mr: isRTL ? 0 : 1,
+                ml: isRTL ? 1 : 0,
                 backgroundColor: isActive(item.path) ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
                 fontWeight: isActive(item.path) ? 'bold' : 'normal',
                 '&:hover': {
