@@ -280,14 +280,6 @@ export const Contact = () => {
                   <Typography variant="h6" color="primary" sx={{ fontWeight: 700, mb: 1, fontSize: '1.1rem' }}>
                     מיקום
                   </Typography>
-                  <DebugTooltip jsonPath="contact.info.location (i18n)">
-                    <Typography variant="body1" color="text.primary" sx={{ fontSize: '1rem', mb: 0.5 }}>
-                      {t('contact.info.location')}
-                    </Typography>
-                  </DebugTooltip>
-                  <Typography variant="body2" color="text.secondary">
-                    לחץ על האייקון לניווט בוויז
-                  </Typography>
                 </Box>
               </Box>
             </Paper>
