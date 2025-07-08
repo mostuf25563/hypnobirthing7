@@ -1,4 +1,3 @@
-# hipnobirthing3
-https://jade-arithmetic-023ccc.netlify.app/
+https://app.netlify.com/projects/mariana-shaham
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/ofer-shaham/hipnobirthing3)
+https://mariana-shaham.netlify.app/
