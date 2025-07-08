@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, Link, IconButton, useTheme } from '@mui/material';
-import { Instagram, Mail, Phone, Facebook } from 'lucide-react';
+import { Instagram, Mail, Phone, Facebook, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export const Footer: React.FC = () => {
@@ -37,6 +37,9 @@ export const Footer: React.FC = () => {
               </IconButton>
               <IconButton color="inherit" component={Link} href="https://www.facebook.com/mary.shaham">
                 <Facebook />
+              </IconButton>
+              <IconButton color="inherit" component={Link} href="https://wa.me/972526205052">
+                <MessageCircle />
               </IconButton>
               <IconButton color="inherit" component={Link} href="mailto:maryza1982@gmail.com">
                 <Mail />
