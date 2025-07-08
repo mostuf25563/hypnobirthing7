@@ -189,7 +189,7 @@ export const heTranslations = {
     }
   },
   contact: {
-    title: 'צרו קשר',
+    title: 'צרי קשר',
     subtitle: 'אני כאן לתמוך בכן במסע שלכן. פנו אליי עם כל שאלה על השירותים שלי.',
     form: {
       firstName: 'שם פרטי',
@@ -200,7 +200,7 @@ export const heTranslations = {
       submit: 'שלחו הודעה'
     },
     info: {
-      title: 'צרו קשר',
+      title: 'צרי קשר',
       phone: '+972 52 620 5052',
       email: 'maryza1982@gmail.com',
       whatsapp: 'ווטסאפ זמין',
