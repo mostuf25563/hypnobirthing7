@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Box, Grid, Paper, Link, Divider } from '@mui/material';
+import { Container, Typography, Box, Grid, Paper, Link, Divider, IconButton } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { Mail, Phone, MessageCircle, MapPin, Instagram, Users, Clock, Calendar } from 'lucide-react';
 import { DebugTooltip } from '../components/Debug/DebugTooltip';
@@ -231,13 +231,15 @@ export const Contact = () => {
                 </Box>
                 
                 <Box sx={{ ml: isRTL ? 0 : 'auto', mr: isRTL ? 'auto' : 0 }}>
-                  <Link
+                  <IconButton
+                    component={Link}
                     href="https://www.waze.com/he/live-map/directions?from=place.w.22872383.228461684.76297"
                     target="_blank"
                     rel="noopener noreferrer"
+                    sx={{ color: '#D4A5A5' }}
                   >
                     <MapPin size={28} color="#D4A5A5" />
-                  </Link>
+                  </IconButton>
                 </Box>
               </Box>
             </Paper>
@@ -364,13 +366,13 @@ export const Contact = () => {
                 
                 <Box sx={{ textAlign: isRTL ? 'right' : 'left' }}>
                   <Typography variant="body1" sx={{ mb: 1 }}>
-                    <strong>ימים א׳-ה׳:</strong> 9:00-20:00
+                    <Box component="strong" sx={{ wordBreak: 'keep-all' }}>ימים א׳-ה׳:</Box> 9:00-20:00
                   </Typography>
                   <Typography variant="body1" sx={{ mb: 1 }}>
-                    <strong>יום ו׳:</strong> 9:00-14:00
+                    <Box component="strong" sx={{ wordBreak: 'keep-all' }}>יום ו׳:</Box> 9:00-14:00
                   </Typography>
                   <Typography variant="body1" color="text.secondary">
-                    <strong>שבת:</strong> סגור
+                    <Box component="strong" sx={{ wordBreak: 'keep-all' }}>שבת:</Box> סגור
                   </Typography>
                 </Box>
               </Paper>
@@ -387,7 +389,9 @@ export const Contact = () => {
               >
                 <Typography 
                   variant="body1" 
-                  sx={{ 
+                  sx={{
+                    wordBreak: 'break-word',
+                    overflowWrap: 'break-word',
                     textAlign: isRTL ? 'right' : 'left',
                     lineHeight: 1.6,
                     fontStyle: 'italic',
@@ -400,7 +404,9 @@ export const Contact = () => {
                 <Typography 
                   variant="body2" 
                   color="primary" 
-                  sx={{ 
+                  sx={{
+                    wordBreak: 'break-word',
+                    overflowWrap: 'break-word',
                     mt: 2,
                     textAlign: isRTL ? 'right' : 'left',
                     fontWeight: 'bold'
