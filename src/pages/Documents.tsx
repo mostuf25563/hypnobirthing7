@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper, IconButton, Card, CardContent, List, ListItem, ListItemText, Accordion, AccordionSummary, AccordionDetails, Stepper, Step, StepLabel, StepContent } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { Award, GraduationCap, FileText, ChevronLeft, ChevronRight, ExpandMore } from 'lucide-react';
+import { Award, GraduationCap, FileText, ChevronLeft, ChevronRight, Expand as ExpandMore } from 'lucide-react';
 import { DocumentsDesignNavigation } from '../components/Debug/DocumentsDesignNavigation';
 
 export const Documents = () => {
