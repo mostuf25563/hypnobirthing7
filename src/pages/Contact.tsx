@@ -94,7 +94,7 @@ export const Contact = () => {
                 fontSize: { xs: '1.1rem', md: '1.25rem' }
               }}
             >
-              {t('contact.subtitle')}
+              אני כאן בכדי לתמוך בך ובמסע שלך
             </Typography>
           </DebugTooltip>
         </Box>
