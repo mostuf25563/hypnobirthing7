@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Typography, Box, Grid, Card, CardContent, Paper } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { Check, Clock, Users, MapPin, Video, Phone } from 'lucide-react';
-import { FadeInText } from '../components/Animations/FadeInText';
 import { ZoomableImage } from '../components/UI/ZoomableImage';
 
 export const Pricing = () => {
@@ -44,19 +43,20 @@ export const Pricing = () => {
 
   return (
     <Container maxWidth="lg" sx={{ py: 8 }} dir={isRTL ? 'rtl' : 'ltr'}>
-      <FadeInText
-        text={t('pricing.title')}
+      <Typography
         variant="h2"
         color="primary"
         sx={{ textAlign: 'center', mb: 2, fontWeight: 'bold' }}
-      />
+      >
+        {t('pricing.title')}
+      </Typography>
       
-      <FadeInText
-        text={t('pricing.subtitle')}
-        delay={500}
+      <Typography
         variant="h5"
         sx={{ textAlign: 'center', mb: 6, color: 'text.secondary' }}
-      />
+      >
+        {t('pricing.subtitle')}
+      </Typography>
 
       {/* Pricing Image */}
       <Box sx={{ mb: 6, textAlign: 'center' }}>
