@@ -42,13 +42,14 @@ export const Home = () => {
             <DebugTooltip jsonPath="home.subtitle (i18n)">
               <Typography
                 variant="h4"
-                color="white"
-                sx={{
-                  mb: 4,
-                  maxWidth: '800px',
-                  textShadow: '1px 1px 2px rgba(0,0,0,0.8)',
-                  lineHeight: 1.4
+                sx={{ 
+                  color: 'white',
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.9)',
+                  fontWeight: 'bold'
                 }}
+                mb={4}
+                maxWidth="800px"
+                lineHeight={1.4}
               >
                 לידה מנצחת - מרגע ההכנה עד החיבוק הראשון ואחריו, יד ביד איתך כל הדרך
               </Typography>

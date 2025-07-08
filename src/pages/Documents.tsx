@@ -35,9 +35,9 @@ export const Documents = () => {
                   textAlign: 'center'
                 }}
               >
-                {index === 0 ? <GraduationCap size={40} color="#4CAF50" /> :
-                 index === 1 ? <Award size={40} color="#4CAF50" /> :
-                              <FileText size={40} color="#4CAF50" />}
+                {index === 0 ? <GraduationCap size={40} color="#D4A5A5" /> :
+                 index === 1 ? <Award size={40} color="#D4A5A5" /> :
+                              <FileText size={40} color="#D4A5A5" />}
                 <Typography variant="h6" sx={{ mt: 2, mb: 1 }}>
                   {cert.title}
                 </Typography>
