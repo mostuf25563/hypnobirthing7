@@ -201,11 +201,11 @@ export const heTranslations = {
     },
     info: {
       title: 'צרו קשר',
-      phone: '+972 50 123 4567',
-      email: 'contact@example.com',
+      phone: '+972 52 620 5052',
+      email: 'maryza1982@gmail.com',
       whatsapp: 'ווטסאפ זמין',
-      whatsappLink: 'https://wa.me/972501234567',
-      location: 'תל אביב-יפו, ישראל'
+      whatsappLink: 'https://chatwith.io/s/mariana-shaham',
+      location: 'קיבוץ נען, ישראל'
     }
   },
   footer: {
