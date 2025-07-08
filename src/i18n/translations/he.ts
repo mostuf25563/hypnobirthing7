@@ -47,7 +47,7 @@ export const heTranslations = {
     }
   },
   courses: {
-    title: ' בחרי את הקורס המתאים לך',
+    title: 'הקורסים שאני מעבירה',
     hypnobirthing: {
       title: 'קורס היפנובירת\'ינג',
       description: 'למדו טכניקות ללידה רגועה ומעצימה',
