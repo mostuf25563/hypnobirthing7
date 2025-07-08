@@ -108,97 +108,42 @@ export const About = () => {
 
       {/* Credentials Section */}
       <Box sx={{ mt: 8 }}>
-        <DebugTooltip jsonPath="about.credentials.title (i18n)">
-          <Typography variant="h4" gutterBottom textAlign="center" color="primary" sx={{ mb: 6 }}>
-            {t('about.credentials.title')}
-          </Typography>
-        </DebugTooltip>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
-            <Paper
-              elevation={3}
-              sx={{
-                p: 4,
-                textAlign: 'center',
-                borderRadius: '20px',
-                height: '100%',
-                transition: 'all 0.3s ease',
-                '&:hover': {
-                  transform: 'translateY(-5px)',
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-                }
-              }}
-            >
-              <Award size={48} color="#D4A5A5" />
+        <Box sx={{ textAlign: 'center', py: 4 }}>
+          <DebugTooltip jsonPath="about.credentials.title (i18n)">
+            <Typography variant="h5" color="primary" sx={{ mb: 4, fontWeight: 600 }}>
+              {t('about.credentials.title')}
+            </Typography>
+          </DebugTooltip>
+          
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 6, flexWrap: 'wrap' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <Award size={20} color="#D4A5A5" />
               <DebugTooltip jsonPath="about.credentials.certified.title (i18n)">
-                <Typography variant="h6" sx={{ mt: 2, mb: 2, color: 'primary.main' }}>
+                <Typography variant="body1" color="text.primary">
                   {t('about.credentials.certified.title')}
                 </Typography>
               </DebugTooltip>
-              <DebugTooltip jsonPath="about.credentials.certified.description (i18n)">
-                <Typography>
-                  {t('about.credentials.certified.description')}
-                </Typography>
-              </DebugTooltip>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Paper
-              elevation={3}
-              sx={{
-                p: 4,
-                textAlign: 'center',
-                borderRadius: '20px',
-                height: '100%',
-                transition: 'all 0.3s ease',
-                '&:hover': {
-                  transform: 'translateY(-5px)',
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-                }
-              }}
-            >
-              <Heart size={48} color="#D4A5A5" />
+            </Box>
+            
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <Heart size={20} color="#D4A5A5" />
               <DebugTooltip jsonPath="about.credentials.passionate.title (i18n)">
-                <Typography variant="h6" sx={{ mt: 2, mb: 2, color: 'primary.main' }}>
+                <Typography variant="body1" color="text.primary">
                   {t('about.credentials.passionate.title')}
                 </Typography>
               </DebugTooltip>
-              <DebugTooltip jsonPath="about.credentials.passionate.description (i18n)">
-                <Typography>
-                  {t('about.credentials.passionate.description')}
-                </Typography>
-              </DebugTooltip>
-            </Paper>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Paper
-              elevation={3}
-              sx={{
-                p: 4,
-                textAlign: 'center',
-                borderRadius: '20px',
-                height: '100%',
-                transition: 'all 0.3s ease',
-                '&:hover': {
-                  transform: 'translateY(-5px)',
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
-                }
-              }}
-            >
-              <Users size={48} color="#D4A5A5" />
+            </Box>
+            
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <Users size={20} color="#D4A5A5" />
               <DebugTooltip jsonPath="about.credentials.community.title (i18n)">
-                <Typography variant="h6" sx={{ mt: 2, mb: 2, color: 'primary.main' }}>
+                <Typography variant="body1" color="text.primary">
                   {t('about.credentials.community.title')}
                 </Typography>
               </DebugTooltip>
-              <DebugTooltip jsonPath="about.credentials.community.description (i18n)">
-                <Typography>
-                  {t('about.credentials.community.description')}
-                </Typography>
-              </DebugTooltip>
-            </Paper>
-          </Grid>
-        </Grid>
+            </Box>
+          </Box>
+        </Box>
       </Box>
     </Container>
   );
