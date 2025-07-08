@@ -222,32 +222,11 @@ export const Contact = () => {
                             )}
                           </Box>
                           
-                          <Link 
-                            href={method.link}
-                            target={method.link.startsWith('http') ? '_blank' : undefined}
-                            rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            sx={{ 
-                              textDecoration: 'none',
-                              color: 'text.primary',
-                              fontWeight: 600,
-                              fontSize: '1.1rem',
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              gap: 1,
-                              '&:hover': {
-                                color: 'primary.main'
-                              }
-                            }}
-                          >
-                            {method.value}
-                            {method.link.startsWith('http') && <ExternalLink size={16} />}
-                          </Link>
-                          
                           <Typography 
                             variant="body2" 
                             color="text.secondary"
                             sx={{ 
-                              mt: 1.5, 
+                              mt: 0.5, 
                               lineHeight: 1.5,
                               fontSize: '0.95rem'
                             }}
