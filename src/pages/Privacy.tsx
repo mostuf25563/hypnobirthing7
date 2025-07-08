@@ -10,33 +10,33 @@ export const Privacy = () => {
   const sections = [
     {
       icon: <Shield size={24} color="#D4A5A5" />,
-      title: 'איסוף מידע',
-      content: 'לא נאסף מידע אישי באתר. המידע מועבר רק בעת יצירת קשר ישיר.'
-    },
-    {
-      icon: <Eye size={24} color="#D4A5A5" />,
-      title: 'שימוש במידע',
-      content: 'המידע משמש רק לצורך מתן השירותים המבוקשים וליצירת קשר.'
-    },
-    {
-      icon: <Lock size={24} color="#D4A5A5" />,
-      title: 'הגנה על המידע',
-      content: 'נוקטים באמצעי אבטחה סטנדרטיים. המידע לא נשמר באתר.'
-    },
-    {
-      icon: <UserCheck size={24} color="#D4A5A5" />,
-      title: 'זכויותיכם',
-      content: 'יש זכות מלאה על המידע. ניתן לבקש מחיקה בכל עת.'
+      title: 'מדיניות פרטיות',
+      content: 'אתר זה אינו אוסף, שומר או מעבד מידע אישי של המשתמשים. כל התקשרות מתבצעת באמצעים חיצוניים (טלפון, אימייל, WhatsApp) ואינה עוברת דרך האתר.'
     },
     {
       icon: <FileText size={24} color="#D4A5A5" />,
-      title: 'שיתוף מידע',
-      content: 'לא נשתף מידע אישי עם צדדים שלישיים.'
+      title: 'תנאי שירות',
+      content: 'השירותים כוללים הכנה ללידה, הדרכת הנקה ועיסוי תינוקות. השימוש באתר מהווה הסכמה לתנאים אלה.'
+    },
+    {
+      icon: <UserCheck size={24} color="#D4A5A5" />,
+      title: 'השירותים המוצעים',
+      content: 'קורסי הכנה ללידה, הדרכת הנקה, שפת דנסטן ועיסוי תינוקות על ידי מדריכה מוסמכת. השירותים למטרות חינוכיות בלבד.'
+    },
+    {
+      icon: <Eye size={24} color="#D4A5A5" />,
+      title: 'תשלומים וביטולים',
+      content: 'תשלום מראש נדרש. ביטול עד 48 שעות לפני המפגש - החזר מלא. ביטול פחות מ-24 שעות - ללא החזר.'
+    },
+    {
+      icon: <Lock size={24} color="#D4A5A5" />,
+      title: 'אחריות וסודיות',
+      content: 'השירותים אינם תחליף לייעוץ רפואי. יש להתייעץ עם רופא. המידע נשמר בסודיות מוחלטת.'
     },
     {
       icon: <Mail size={24} color="#D4A5A5" />,
       title: 'יצירת קשר',
-      content: 'לשאלות: maryza1982@gmail.com או 052-620-5052'
+      content: 'לשאלות ופניות: maryza1982@gmail.com או 052-620-5052. החוק הישראלי חל על התנאים.'
     }
   ];
 
@@ -44,6 +44,8 @@ export const Privacy = () => {
     <Container maxWidth="lg" sx={{ py: 8 }} dir={isRTL ? 'rtl' : 'ltr'}>
       <Typography variant="h2" color="primary" sx={{ textAlign: 'center', mb: 6, fontWeight: 'bold' }}>
         מדיניות פרטיות
+        <br />
+        ותנאי שירות
       </Typography>
 
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
