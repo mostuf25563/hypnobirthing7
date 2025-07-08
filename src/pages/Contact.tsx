@@ -235,26 +235,8 @@ export const Contact = () => {
                     href="https://www.waze.com/he/live-map/directions?from=place.w.22872383.228461684.76297"
                     target="_blank"
                     rel="noopener noreferrer"
-                    sx={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 1,
-                      px: 3,
-                      py: 1.5,
-                      borderRadius: '8px',
-                      backgroundColor: 'primary.main',
-                      color: 'primary.main',
-                      color: 'white',
-                      textDecoration: 'none',
-                      fontSize: '1rem',
-                      fontWeight: 'medium',
-                      '&:hover': {
-                        backgroundColor: 'primary.dark',
-                        transform: 'translateY(-1px)'
-                      }
-                    }}
                   >
-                    פתח ב-Waze
+                    <MapPin size={28} color="#D4A5A5" />
                   </Link>
                 </Box>
               </Box>

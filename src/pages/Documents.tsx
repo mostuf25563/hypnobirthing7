@@ -17,7 +17,7 @@ export const Documents = () => {
       </Typography>
 
       {/* Certifications */}
-      <Box sx={{ mb: 8 }}>
+      <Box sx={{ mb: 8, mt: 6 }}>
         <Typography variant="h4" gutterBottom color="primary" textAlign={isRTL ? 'right' : 'left'}>
           {t('documents.certifications.title')}
         </Typography>
