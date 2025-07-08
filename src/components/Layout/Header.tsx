@@ -21,6 +21,7 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
   const { t, i18n } = useTranslation();
   const theme = useTheme();
   const location = useLocation();
+  const isRTL = i18n.language === 'he';
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [langAnchorEl, setLangAnchorEl] = React.useState<null | HTMLElement>(null);
 
