@@ -230,7 +230,7 @@ export const Contact = () => {
                   </DebugTooltip>
                 </Box>
                 
-                <Box sx={{ display: 'flex', gap: 2, flexDirection: isRTL ? 'row-reverse' : 'row' }}>
+                <Box sx={{ ml: isRTL ? 0 : 'auto', mr: isRTL ? 'auto' : 0 }}>
                   <Link
                     href="https://www.waze.com/he/live-map/directions?from=place.w.22872383.228461684.76297"
                     target="_blank"
@@ -239,58 +239,23 @@ export const Contact = () => {
                       display: 'inline-flex',
                       alignItems: 'center',
                       gap: 1,
-                      px: 2,
-                      py: 1,
+                      px: 3,
+                      py: 1.5,
                       borderRadius: '8px',
-                      backgroundColor: 'rgba(212, 165, 165, 0.1)',
+                      backgroundColor: 'primary.main',
                       color: 'primary.main',
+                      color: 'white',
                       textDecoration: 'none',
-                      fontSize: '0.9rem',
+                      fontSize: '1rem',
                       fontWeight: 'medium',
                       '&:hover': {
-                        backgroundColor: 'rgba(212, 165, 165, 0.2)'
+                        backgroundColor: 'primary.dark',
+                        transform: 'translateY(-1px)'
                       }
                     }}
                   >
-                    Waze
+                    פתח ב-Waze
                   </Link>
-                  
-                  <Link
-                    href="https://maps.app.goo.gl/Sj1Zk8RM7P51VNGL7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 1,
-                      px: 2,
-                      py: 1,
-                      borderRadius: '8px',
-                      backgroundColor: 'rgba(212, 165, 165, 0.1)',
-                      color: 'primary.main',
-                      textDecoration: 'none',
-                      fontSize: '0.9rem',
-                      fontWeight: 'medium',
-                      '&:hover': {
-                        backgroundColor: 'rgba(212, 165, 165, 0.2)'
-                      }
-                    }}
-                  >
-                    Google Maps
-                  </Link>
-                </Box>
-                
-                {/* Embedded Map */}
-                <Box sx={{ mt: 3, borderRadius: '12px', overflow: 'hidden' }}>
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13551.273357251826!2d34.83989836064083!3d31.884355887619147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b7d43666d6e3%3A0xe88526f9b0ad8a22!2sNa&#39;an!5e0!3m2!1sen!2sil!4v1751989633798!5m2!1sen!2sil"
-                    width="100%"
-                    height="200"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
                 </Box>
               </Box>
             </Paper>
