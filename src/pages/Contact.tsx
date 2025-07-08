@@ -10,22 +10,6 @@ export const Contact = () => {
 
   const contactMethods = [
     {
-      icon: <Phone size={32} color="#D4A5A5" />,
-      title: 'טלפון',
-      value: '052-620-5052',
-      link: 'tel:0526205052',
-      description: 'זמין לשיחות בין השעות 9:00-20:00',
-      primary: true
-    },
-    {
-      icon: <Mail size={32} color="#D4A5A5" />,
-      title: 'אימייל',
-      value: 'maryza1982@gmail.com',
-      link: 'mailto:maryza1982@gmail.com',
-      description: 'מענה תוך 24 שעות',
-      primary: false
-    },
-    {
       icon: <MessageCircle size={32} color="#D4A5A5" />,
       title: 'WhatsApp',
       value: '052-620-5052',
@@ -34,11 +18,19 @@ export const Contact = () => {
       primary: true
     },
     {
-      icon: <MessageCircle size={32} color="#D4A5A5" />,
-      title: 'צ\'אט מקוון',
-      value: 'שירות לקוחות',
-      link: 'https://chatwith.io/s/mariana-shaham',
-      description: 'צ\'אט אינטראקטיבי עם מענה מיידי',
+      icon: <Phone size={32} color="#D4A5A5" />,
+      title: 'טלפון',
+      value: '052-620-5052',
+      link: 'tel:0526205052',
+      description: 'זמין לשיחות בין השעות 9:00-20:00',
+      primary: false
+    },
+    {
+      icon: <Mail size={32} color="#D4A5A5" />,
+      title: 'אימייל',
+      value: 'maryza1982@gmail.com',
+      link: 'mailto:maryza1982@gmail.com',
+      description: 'מענה תוך 24 שעות',
       primary: false
     }
   ];
@@ -148,7 +140,11 @@ export const Contact = () => {
               <Grid container spacing={4}>
                 {contactMethods.map((method, index) => (
                   <Grid item xs={12} md={6} key={index}>
-                    <Box
+                    <IconButton
+                      component={Link}
+                      href={method.link}
+                      target={method.link.startsWith('http') ? '_blank' : undefined}
+                      rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                       sx={{
                         p: 4,
                         borderRadius: '20px',
@@ -257,10 +253,15 @@ export const Contact = () => {
                             }}
                           >
                             {method.description}
+                        color: '#D4A5A5',
+                        '&:hover': {
+                          backgroundColor: 'rgba(212, 165, 165, 0.2)',
+                          transform: 'scale(1.05)'
+                        }
                           </Typography>
                         </Box>
                       </Box>
-                    </Box>
+                    </IconButton>
                   </Grid>
                 ))}
               </Grid>
@@ -408,32 +409,11 @@ export const Contact = () => {
                                 sx={{ 
                                   fontWeight: 600,
                                   fontSize: '0.9rem'
-                                }}
-                              >
-                                {social.handle}
-                              </Typography>
-                              {social.verified && (
-                                <Chip 
-                                  label="מאומת" 
-                                  size="small" 
-                                  sx={{ 
-                                    backgroundColor: 'rgba(76, 175, 80, 0.1)',
-                                    color: '#4CAF50',
-                                    fontWeight: 600,
-                                    fontSize: '0.7rem',
-                                    height: '20px'
-                                  }} 
-                                />
-                              )}
-                            </Box>
-                          </Box>
-                        </Box>
-                        
                         <Typography 
                           variant="body2" 
                           color="text.secondary"
                           sx={{ 
-                            textAlign: isRTL ? 'right' : 'left',
+                            mt: 1, 
                             lineHeight: 1.5,
                             fontSize: '0.9rem',
                             mb: social.followers ? 1 : 0
