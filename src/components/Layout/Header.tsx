@@ -84,7 +84,6 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
                 borderRadius: '20px',
                 px: 3,
                 py: 1,
-                transition: 'all 0.3s ease',
                 backgroundColor: isActive(item.path) ? 'rgba(255, 255, 255, 0.2)' : 'transparent',
                 fontWeight: isActive(item.path) ? 'bold' : 'normal',
                 '&:hover': {
@@ -114,7 +113,6 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
           color="inherit" 
           onClick={handleLangMenu}
           sx={{
-            transition: 'all 0.3s ease',
             '&:hover': {
               transform: 'scale(1.1)',
               backgroundColor: 'rgba(255, 255, 255, 0.1)'
@@ -128,7 +126,6 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
           color="inherit" 
           onClick={toggleTheme}
           sx={{
-            transition: 'all 0.3s ease',
             '&:hover': {
               transform: 'scale(1.1)',
               backgroundColor: 'rgba(255, 255, 255, 0.1)'
@@ -151,9 +148,9 @@ export const Header: React.FC<HeaderProps> = ({ toggleTheme }) => {
               onClick={handleClose}
               sx={{
                 fontWeight: isActive(item.path) ? 'bold' : 'normal',
-                backgroundColor: isActive(item.path) ? 'rgba(76, 175, 80, 0.1)' : 'transparent',
+                backgroundColor: isActive(item.path) ? 'rgba(212, 165, 165, 0.1)' : 'transparent',
                 '&:hover': {
-                  backgroundColor: 'rgba(76, 175, 80, 0.2)'
+                  backgroundColor: 'rgba(212, 165, 165, 0.2)'
                 }
               }}
             >

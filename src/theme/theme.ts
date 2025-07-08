@@ -4,18 +4,22 @@ const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#4CAF50',
-      light: '#81C784',
-      dark: '#388E3C'
+      main: '#D4A5A5', // Soft rose
+      light: '#E8C4C4',
+      dark: '#B08A8A'
     },
     secondary: {
-      main: '#66BB6A',
-      light: '#A5D6A7',
-      dark: '#2E7D32'
+      main: '#E6B89C', // Warm peach
+      light: '#F2D2B8',
+      dark: '#D19A7A'
     },
     background: {
-      default: '#F5F5F5',
+      default: '#FBF8F6', // Warm cream
       paper: '#FFFFFF'
+    },
+    text: {
+      primary: '#4A4A4A', // Soft charcoal
+      secondary: '#6B6B6B'
     }
   },
   typography: {
@@ -46,18 +50,18 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#81C784',
-      light: '#A5D6A7',
-      dark: '#4CAF50'
+      main: '#E8C4C4',
+      light: '#F2D2D2',
+      dark: '#D4A5A5'
     },
     secondary: {
-      main: '#A5D6A7',
-      light: '#C8E6C9',
-      dark: '#66BB6A'
+      main: '#F2D2B8',
+      light: '#F7E4D0',
+      dark: '#E6B89C'
     },
     background: {
-      default: '#121212',
-      paper: '#1E1E1E'
+      default: '#2A2A2A',
+      paper: '#3A3A3A'
     }
   }
 });

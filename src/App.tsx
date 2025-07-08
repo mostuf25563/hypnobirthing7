@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { lightTheme, darkTheme } from './theme/theme';
 import { Header } from './components/Layout/Header';
 import { Footer } from './components/Layout/Footer';
+import { DebugToggle } from './components/Debug/DebugTooltip';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Courses } from './pages/Courses';
@@ -30,6 +31,7 @@ function App() {
       <CssBaseline />
       <Router>
         <div className="flex flex-col min-h-screen">
+          <DebugToggle />
           <Header toggleTheme={toggleTheme} />
           <main className="flex-grow">
             <Routes>
