@@ -105,46 +105,6 @@ export const About = () => {
           </DebugTooltip>
         </Paper>
       </Box>
-
-      {/* Credentials Section */}
-      <Box sx={{ mt: 8 }}>
-        <Box sx={{ textAlign: 'center', py: 2 }}>
-          <DebugTooltip jsonPath="about.credentials.title (i18n)">
-            <Typography variant="h5" color="primary" sx={{ mb: 2, fontWeight: 600 }}>
-              {t('about.credentials.title')}
-            </Typography>
-          </DebugTooltip>
-          
-          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, flexWrap: 'wrap', alignItems: 'center' }}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Award size={20} color="#D4A5A5" />
-              <DebugTooltip jsonPath="about.credentials.certified.title (i18n)">
-                <Typography variant="body2" color="text.primary">
-                  {t('about.credentials.certified.title')}
-                </Typography>
-              </DebugTooltip>
-            </Box>
-            
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Heart size={20} color="#D4A5A5" />
-              <DebugTooltip jsonPath="about.credentials.passionate.title (i18n)">
-                <Typography variant="body2" color="text.primary">
-                  {t('about.credentials.passionate.title')}
-                </Typography>
-              </DebugTooltip>
-            </Box>
-            
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Users size={20} color="#D4A5A5" />
-              <DebugTooltip jsonPath="about.credentials.community.title (i18n)">
-                <Typography variant="body2" color="text.primary">
-                  {t('about.credentials.community.title')}
-                </Typography>
-              </DebugTooltip>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
     </Container>
   );
 };
