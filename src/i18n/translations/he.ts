@@ -10,7 +10,7 @@ export const heTranslations = {
   home: {
     welcome: 'ברוכות הבאות למסע שלכן',
     subtitle: 'מעצימות אמהות דרך היפנובירת\'ינג והדרכת הנקה',
-    exploreButton: 'גלי את הקורסים שלנו',
+    exploreButton: 'גלי את הקורס המתאים לך ביותר',
     features: {
       hypnobirthing: {
         title: 'היפנובירת\'ינג',
