@@ -28,10 +28,18 @@ export const Contact = () => {
     {
       icon: <MessageCircle size={32} color="#D4A5A5" />,
       title: 'WhatsApp',
-      value: 'צ\'אט מקוון',
-      link: 'https://chatwith.io/s/mariana-shaham',
+      value: '052-620-5052',
+      link: 'https://wa.me/972526205052',
       description: 'מענה מהיר ונוח',
       primary: true
+    },
+    {
+      icon: <MessageCircle size={32} color="#D4A5A5" />,
+      title: 'צ\'אט מקוון',
+      value: 'שירות לקוחות',
+      link: 'https://chatwith.io/s/mariana-shaham',
+      description: 'צ\'אט אינטראקטיבי עם מענה מיידי',
+      primary: false
     }
   ];
 
