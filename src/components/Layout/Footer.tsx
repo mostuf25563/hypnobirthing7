@@ -32,16 +32,13 @@ export const Footer: React.FC = () => {
               {t('navigation.contact')}
             </Typography>
             <Box sx={{ display: 'flex', gap: 2 }}>
-              <IconButton color="inherit" component={Link} href="https://instagram.com">
+              <IconButton color="inherit" component={Link} href="https://www.instagram.com/mariana.shaham/">
                 <Instagram />
               </IconButton>
-              <IconButton color="inherit" component={Link} href="https://facebook.com">
-                <Facebook />
-              </IconButton>
-              <IconButton color="inherit" component={Link} href="mailto:contact@example.com">
+              <IconButton color="inherit" component={Link} href="mailto:maryza1982@gmail.com">
                 <Mail />
               </IconButton>
-              <IconButton color="inherit" component={Link} href="tel:+1234567890">
+              <IconButton color="inherit" component={Link} href="tel:0526205052">
                 <Phone />
               </IconButton>
             </Box>

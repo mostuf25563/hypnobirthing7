@@ -47,6 +47,18 @@ export const DebugTooltip: React.FC<DebugTooltipProps> = ({ jsonPath, children }
 
 export const DebugToggle: React.FC = () => {
   const [debugMode, setDebugMode] = useState(globalDebugMode);
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const checkUrl = () => {
+      setShowButton(window.location.hash.includes('#debug'));
+    };
+    
+    checkUrl();
+    window.addEventListener('hashchange', checkUrl);
+    
+    return () => window.removeEventListener('hashchange', checkUrl);
+  }, []);
 
   const toggleDebug = () => {
     globalDebugMode = !globalDebugMode;
@@ -67,6 +79,8 @@ export const DebugToggle: React.FC = () => {
       debugListeners.forEach(listener => listener(globalDebugMode));
     }
   }, []);
+
+  if (!showButton) return null;
 
   return (
     <Tooltip title="Toggle Debug Mode (Ctrl+D)" arrow>
