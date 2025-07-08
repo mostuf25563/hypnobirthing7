@@ -264,19 +264,26 @@ export const Contact = () => {
                   border: '1px solid rgba(212, 165, 165, 0.1)'
                 }}
               >
-                <Box
+                <IconButton
+                  component={Link}
+                  href="https://www.waze.com/he/live-map/directions?from=place.w.22872383.228461684.76297"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
                     p: 3,
                     borderRadius: '16px',
                     backgroundColor: 'rgba(212, 165, 165, 0.1)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    boxShadow: '0 4px 12px rgba(212, 165, 165, 0.15)'
+                    boxShadow: '0 4px 12px rgba(212, 165, 165, 0.15)',
+                    color: '#D4A5A5',
+                    '&:hover': {
+                      backgroundColor: 'rgba(212, 165, 165, 0.2)',
+                      transform: 'scale(1.05)'
+                    },
+                    transition: 'all 0.2s ease'
                   }}
                 >
-                  <MapPin size={32} color="#D4A5A5" />
-                </Box>
+                  <MapPin size={32} />
+                </IconButton>
                 
                 <Box sx={{ flex: 1, textAlign: isRTL ? 'right' : 'left' }}>
                   <Typography variant="h6" color="primary" sx={{ fontWeight: 700, mb: 1, fontSize: '1.1rem' }}>
@@ -291,24 +298,6 @@ export const Contact = () => {
                     לחץ על האייקון לניווט בוויז
                   </Typography>
                 </Box>
-                
-                <IconButton
-                  component={Link}
-                  href="https://www.waze.com/he/live-map/directions?from=place.w.22872383.228461684.76297"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{ 
-                    color: '#D4A5A5',
-                    backgroundColor: 'rgba(212, 165, 165, 0.1)',
-                    '&:hover': {
-                      backgroundColor: 'rgba(212, 165, 165, 0.2)',
-                      transform: 'scale(1.05)'
-                    },
-                    transition: 'all 0.2s ease'
-                  }}
-                >
-                  <ExternalLink size={24} />
-                </IconButton>
               </Box>
             </Paper>
           </Grid>
