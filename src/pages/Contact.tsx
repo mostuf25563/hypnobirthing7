@@ -253,11 +253,6 @@ export const Contact = () => {
                             }}
                           >
                             {method.description}
-                        color: '#D4A5A5',
-                        '&:hover': {
-                          backgroundColor: 'rgba(212, 165, 165, 0.2)',
-                          transform: 'scale(1.05)'
-                        }
                           </Typography>
                         </Box>
                       </Box>
@@ -409,6 +404,14 @@ export const Contact = () => {
                                 sx={{ 
                                   fontWeight: 600,
                                   fontSize: '0.9rem'
+                                }}
+                              >
+                                {social.handle}
+                              </Typography>
+                            </Box>
+                          </Box>
+                        </Box>
+                        
                         <Typography 
                           variant="body2" 
                           color="text.secondary"
