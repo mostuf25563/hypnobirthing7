@@ -5,7 +5,7 @@ export const heTranslations = {
     courses: 'קורסים',
     pricing: 'מחירון',
     documents: 'ההסמכות שלי',
-    contact: 'צור קשר'
+    contact: 'ליצירת קשר'
   },
   home: {
     welcome: 'ברוכות הבאות למסע שלכן',
