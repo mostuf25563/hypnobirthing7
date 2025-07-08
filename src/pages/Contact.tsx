@@ -225,7 +225,7 @@ export const Contact = () => {
                   </Typography>
                   <DebugTooltip jsonPath="contact.info.location (i18n)">
                     <Typography variant="body1" color="text.primary">
-                  <Typography variant="body1" color="text.primary" sx={{ mb: 2 }}>
+                      {t('contact.info.location')}
                     </Typography>
                   </DebugTooltip>
                 </Box>
