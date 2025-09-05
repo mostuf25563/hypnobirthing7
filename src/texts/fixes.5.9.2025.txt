@@ -8,7 +8,7 @@
 make page less noisy (less font types, more delicate)
 
 
-fix title: mariana shaham
+fix title: מאריאנה שחם
 
 
 
