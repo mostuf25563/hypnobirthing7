@@ -2,6 +2,16 @@
 למחוק - השגים מקצועיים
 למחוק  - הסמכת יוגה טרום לידתית
 
+אודותי:
+(/about)
+------
+make page less noisy (less font types, more delicate)
+
+
+fix title: mariana shaham
+
+
+
 הסמכות: 
 ---------
 הכנה ללידה בשיטת היפנובירת'ינג (לפי kghypnobirthing)
